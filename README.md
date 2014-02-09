@@ -24,7 +24,7 @@ Cout = AB + ACin + BCin
 
 ### Testing
 #### Test One
-![alt text](https://github.com/alexsisco714/Lab2/blob/master/test1_screenshot.JPG "First Test")
+![alt text](https://github.com/alexsisco714/Lab2/blob/master/test1.JPG "First Test")
 
 The first test for the Full Adder worked perfectly. All of the waveform outputs in Isim  matched exactly to the 
 truth table above. No debugging was required.
