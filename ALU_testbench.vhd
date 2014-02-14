@@ -79,15 +79,30 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
+	--summation test
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 		A2<="0000";
 		B2<="0000";
 		Cin2<='0';
-		For i in 0 to 512 loop
-			for j in 0 to 512 loop
+		For i in 0 to 15 loop
+			for j in 0 to 15 loop
 				wait for 10 ns;
 					assert (F2=A2 + B2) report "summation test" severity Error;
+					B2<= B2 + "0001";
+			end loop;
+			A2<=A2+"0001";
+		end loop;
+--subtraction test
+      -- hold reset state for 100 ns.
+      wait for 100 ns;	
+		A2<="0000";
+		B2<="0000";
+		Cin2<='1';
+		For i in 0 to 15 loop
+			for j in 0 to 15 loop
+				wait for 10 ns;
+					assert (F2=A2 - B2) report "subtraction test" severity Error;
 					B2<= B2 + "0001";
 			end loop;
 			A2<=A2+"0001";
