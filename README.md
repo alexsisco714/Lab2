@@ -41,7 +41,7 @@ It is of a ripple-carry adder format.
 
 ### Testing 
 ####Isim testing
-the Isim tester returned no errors for a 512 combinations
+the Isim tester returned no errors for all 512 combinations
 
 ####Debugging
 The first time the FPGA was programmed the overflow detection did not work because it was not set up properly for twos compliment addition. Carry Ins were xor'd with carryouts when numbers were being added which fixed the problem with the twos compliment addition overflow detection.
