@@ -33,16 +33,16 @@ entity ALU is
     Port ( A2 : in  STD_LOGIC_VECTOR (3 downto 0);
            B2 : in  STD_LOGIC_VECTOR (3 downto 0);
            Cin2 : in  STD_LOGIC;
+			  V : out STD_LOGIC;
            Cout2 : out  STD_LOGIC;
            F2 : out  STD_LOGIC_VECTOR (3 downto 0));
 end ALU;
-V <= '1' WHEN (signed(A2) + signed(B2) <0) or (((not signed(A2)) + (not signed(B2)))>0) ELSE '0';
+
 architecture Behavioral of ALU is
 COMPONENT Full_Adder is
 	port(A : in STD_LOGIC;
 		  B : in STD_LOGIC;
 		  Cin : in STD_LOGIC;
-		  V : out STD_LOGIC;
 		  Cout : out STD_LOGIC;
 		  F : out STD_LOGIC);
 END COMPONENT Full_Adder;
@@ -74,7 +74,7 @@ Bit3: component Full_Adder
 				Cin => C(2),
 				Cout => Cout2,
 				F => F2(3));
-V <= '1' WHEN (unsigned(A2) + unsigned(B2) <0) or (((not unsigned(A2)) + (not unsigned(B2)))>0) ELSE '0';
+V <= c(3) xor c(2) When Cin2 = '0' ELSE '0';
 
 end Behavioral;
 
