@@ -1,0 +1,17 @@
+### ALU constraints file ###
+#inputs
+NET "A2<3>" LOC = "R17";
+NET "A2<2>" LOC = "N17";
+NET "A2<1>" LOC = "L13";
+NET "A2<0>" LOC = "L14";
+NET "B2<3>" LOC = "K17";
+NET "B2<2>" LOC = "K18";
+NET "B2<1>" LOC = "H18";
+NET "B2<0>" LOC = "G18";
+NET "Cin2" LOC = "H13";
+#Outputs
+NET "F2<3>" LOC = "K14";
+NET "F2<2>" LOC = "K15";
+NET "F2<1>" LOC = "J15";
+NET "F2<0>" LOC = "J14";
+NET "V" LOC = "R4";
